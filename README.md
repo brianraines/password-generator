@@ -16,14 +16,14 @@ Password Requirements:
 
 ```bash
     Usage:
-        bin/console app:generate-password [options]
+        app:generate-password [options]
 
     Options:
-        -w, --word-count=WORD-COUNT          Word Count [default: 3]
-        -l, --word-length=WORD-LENGTH        Word Length [default: 4]
-        -b, --number-count=NUMBER-COUNT      Number Count [default: 3]
-        -s, --symbol-count=SYMBOL-COUNT      Symbol Count [default: 1]
-        -p, --password-count=PASSWORD-COUNT  Password Count [default: 10]
+        -w, --word-count=WORD-COUNT          Word Count[1-10] [default: 3]
+        -l, --word-length=WORD-LENGTH        Word Length [3-9] [default: 5]
+        -b, --number-count=NUMBER-COUNT      Number Count [1-20] [default: 3]
+        -s, --symbol-count=SYMBOL-COUNT      Symbol Count [1-3] [default: 1]
+        -p, --password-count=PASSWORD-COUNT  Password Count [1-1000] [default: 10]
         -h, --help                           Display help for the given command. When no command is given display help for the list command
         -q, --quiet                          Do not output any message
         -V, --version                        Display this application version

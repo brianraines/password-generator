@@ -80,11 +80,7 @@ class PasswordGenerator
     {
         $words = [];
 
-        $attempts = 0;
-
-        while ($attempts < ($this->wordCount * 3) && count($words) < $this->wordCount) {
-            $attempts++;
-
+        while (count($words) < $this->wordCount) {
             $word = $this->wordBank[rand(0, (count($this->wordBank) - 1))];
             if (in_array(ucwords(strtolower($word)), $words) !== true && in_array(strtolower($word), $this->usedWords) !== true) {
                 $words[] = ucwords(strtolower($word));
