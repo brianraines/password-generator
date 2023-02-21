@@ -2,7 +2,7 @@
 Script that generates passwords
 
 ## System Requirements
-- PHP & Composer `brew install composer`
+- PHP & [Composer](https://formulae.brew.sh/formula/composer) `brew install composer`
 - Then from the app root folder run `composer install` to grab packages.
 
 ## Password Requirements:
