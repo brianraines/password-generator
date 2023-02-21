@@ -38,4 +38,4 @@ Password Requirements:
 
 Example default output: `TreeMarsExit=428`
 
-If using an Acronym like `Toy`: `PondAgedLook$015`
+If using an Acronym like `Pal`: `PondAgedLook$015`
