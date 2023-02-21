@@ -20,6 +20,7 @@ class PasswordGenerator
     {
         $this->wordLength = $wordLength;
         $this->wordCount = $wordCount;
+        $this->numberCount = $numberCount;
         $this->symbolCount = $symbolCount;
         $this->loadWordBank();
     }
@@ -107,7 +108,7 @@ class PasswordGenerator
                 if ($num == $number) {
                     $hasDuplicate = true;
 
-                    if ($count < ($this->numberCount - 1)) {
+                    if ($count < 2) {
                         $numbers[] = $number;
                     }
                 }

@@ -17,7 +17,7 @@ class GeneratorCommand extends Command
         $this
             // ...
             ->addOption('word-count', 'w', InputOption::VALUE_REQUIRED, 'Word Count', 3)
-            ->addOption('word-length', 'l', InputOption::VALUE_REQUIRED, 'Word Length', 4)
+            ->addOption('word-length', 'l', InputOption::VALUE_REQUIRED, 'Word Length', 5)
             ->addOption('number-count', 'b', InputOption::VALUE_REQUIRED, 'Number Count', 3)
             ->addOption('symbol-count', 's', InputOption::VALUE_REQUIRED, 'Symbol Count', 1)
             ->addOption('password-count', 'p', InputOption::VALUE_REQUIRED, 'Password Count', 10)
