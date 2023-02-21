@@ -34,4 +34,4 @@ Password Requirements:
         -v|vv|vvv, --verbose                 Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
 ```
 
-Example output: TreeMarsExit=428
+Example output: `TreeMarsExit=428`
