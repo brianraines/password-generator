@@ -7,6 +7,7 @@ Password Requirements:
     - Unique (meaning different words in the password)
     - N letters long
     - Capitalized, the first letter of the word in uppercase, and the rest of the letters in lowercase, like `Tree`
+    - If using an acronym, first letter of each word must spell out the acronym, like `PondAgedLook` for the acronym `Pal`
     - If not using an acronym, cannot start or end with the letter `O`, `L` or `i`
 - numbers:
     - each random number can repeat in the set, but can only repeat once
