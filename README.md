@@ -6,7 +6,7 @@ Password Requirements:
 - each word is:
     - Unique (meaning different words in the password)
     - N letters long
-    - Capitalized, the first letter of the word in uppercase, and the rest of the letters in lowercase. like “Tree”
+    - Capitalized, the first letter of the word in uppercase, and the rest of the letters in lowercase, like `Tree`
     - cannot start or end with the letter `O`, `L` or `i`
 - numbers:
     - each random number can repeat in the set, but can only repeat once
