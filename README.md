@@ -16,7 +16,7 @@ Password Requirements:
 
 
     Usage:
-        app:generate-password [options]
+        bin/console app:generate-password [options]
 
     Options:
         -w, --word-count=WORD-COUNT          Word Count [default: 3]
