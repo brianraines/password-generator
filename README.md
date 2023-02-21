@@ -14,7 +14,7 @@ Password Requirements:
         - `333` is not okay
 - 1-3 special character of `~!@#$%^&*()_+=-`
 
-
+```bash
     Usage:
         bin/console app:generate-password [options]
 
@@ -32,6 +32,6 @@ Password Requirements:
         -e, --env=ENV                        The Environment name. [default: "dev"]
             --no-debug                       Switch off debug mode.
         -v|vv|vvv, --verbose                 Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
-
+```
 
 Example output: TreeMarsExit=428
