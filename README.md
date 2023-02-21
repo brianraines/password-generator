@@ -17,7 +17,7 @@ Password Requirements:
 
 ```bash
     Usage:
-        app:generate-password [options]
+        bin/console app:generate-password [options]
 
     Options:
         -w, --word-count=WORD-COUNT          Word Count[1-10] [default: 3]
