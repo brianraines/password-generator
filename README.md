@@ -1,11 +1,11 @@
 # password-generator
 Script that generates passwords
 
-##System Requirements
+## System Requirements
 - PHP & Composer `brew install composer`
 - Then from the app root folder run `composer install` to grab packages.
 
-##Password Requirements:
+## Password Requirements:
 - each word is:
     - Unique (meaning different words in the password)
     - N letters long
