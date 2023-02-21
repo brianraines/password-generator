@@ -7,6 +7,7 @@ use Symfony\Component\Finder\Finder;
 class PasswordGenerator
 {
     private $finder;
+    private $acronym = '';
     private $wordLength = 5;
     private $wordCount = 3;
     private $numberCount = 3;
@@ -14,10 +15,10 @@ class PasswordGenerator
     private $numbers = '0123456789';
     private $symbols = '~!@#$%^&*()_+=-';
     private $wordBank = [];
-    private $usedWords = [];
 
-    public function __construct($wordLength, $wordCount, $numberCount, $symbolCount)
+    public function __construct($wordLength, $wordCount, $numberCount, $symbolCount, $acronym)
     {
+        $this->acronym = strtolower($acronym);
         $this->wordLength = $wordLength;
         $this->wordCount = $wordCount;
         $this->numberCount = $numberCount;
@@ -35,10 +36,7 @@ class PasswordGenerator
                 $words = array_filter(
                     $candidates,
                     function ($value) {
-                        return (strlen($value) == $this->wordLength
-                        && in_array(strtolower(substr($value, 0, 1)), ['o', 'l', 'i']) !== true
-                        && in_array(strtolower(substr($value, -1, 1)), ['o', 'l', 'i']) !== true
-                        );
+                        return (strlen($value) == $this->wordLength);
                     }
                 );
                 if (count($words) > 0) {
@@ -79,12 +77,32 @@ class PasswordGenerator
     private function getWords(): string
     {
         $words = [];
+        $letter = '';
 
-        while (count($words) < $this->wordCount) {
-            $word = $this->wordBank[rand(0, (count($this->wordBank) - 1))];
-            if (in_array(ucwords(strtolower($word)), $words) !== true && in_array(strtolower($word), $this->usedWords) !== true) {
+        $maxWords = ((strlen($this->acronym) > 0) ? strlen($this->acronym) : $this->wordCount);
+
+        while (count($words) < $maxWords) {
+            if (strlen($this->acronym) > 0) {
+                $letter = substr($this->acronym, count($words), 1);
+            }
+
+            $candidates = (strlen($letter) > 0) ? array_values(array_filter(
+                $this->wordBank,
+                function ($candidate) use ($letter) {
+                    return (substr($candidate, 0, 1) == $letter);
+                }
+            )) : array_values(array_filter(
+                $this->wordBank,
+                function ($candidate) {
+                    return (in_array(strtolower(substr($candidate, 0, 1)), ['o', 'l', 'i']) !== true
+                        && in_array(strtolower(substr($candidate, -1, 1)), ['o', 'l', 'i']) !== true);
+                }
+            ));
+
+            $word = $candidates[rand(0, (count($candidates) - 1))];
+
+            if (in_array(ucwords(strtolower($word)), $words) !== true) {
                 $words[] = ucwords(strtolower($word));
-                $this->usedWords[] = strtolower($word);
             }
         }
 
