@@ -3,16 +3,16 @@ Script that generates passwords
 
 
 Password Requirements:
-	• each word is:
-		• Unique (meaning different words in the password)
-		• N letters long
-		• Capitalized, the first letter of the word in uppercase, and the rest of the letters in lowercase. like “Tree”
+	- each word is:
+		- Unique (meaning different words in the password)
+		- N letters long
+		- Capitalized, the first letter of the word in uppercase, and the rest of the letters in lowercase. like “Tree”
 		• cannot start or end with the letter “O”, “L” or “i"
-	• numbers:
-		• each random number can repeat in the set, but can only repeat once
-			• 369, 633, 363 and 336 are all okay
-			• 333 is not okay
-	• 1-3 special character of ~!@#$%^&*()_+=-
+	- numbers:
+		- each random number can repeat in the set, but can only repeat once
+			- 369, 633, 363 and 336 are all okay
+			- 333 is not okay
+	- 1-3 special character of `~!@#$%^&*()_+=-`
 
 
     Usage:
