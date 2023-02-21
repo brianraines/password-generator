@@ -42,8 +42,4 @@ Script that generates passwords
 
 Example default output: `TreeMarsExit=428`
 
-<<<<<<< HEAD
-If using an Acronym like `Toy`: `PondAgedLook$015`
-=======
 If using an Acronym like `Pal`: `PondAgedLook$015`
->>>>>>> 6a06b94da26268968deb3c18101615dfe3d43634
